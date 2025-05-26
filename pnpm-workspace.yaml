@@ -33,3 +33,7 @@ onlyBuiltDependencies:
   - esbuild
   - simple-git-hooks
   - unrs-resolver
+catalog:
+  '@ionic/vue': ^8.5.7
+  '@ionic/vue-router': ^8.5.7
+  vite-plugin-vue-layouts: ^0.11.0

@@ -5,6 +5,7 @@ import Vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import { IonicResolver} from 'unplugin-vue-components/resolvers'
 import Layouts from 'vite-plugin-vue-layouts';
 import VueMacros from 'unplugin-vue-macros/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
@@ -58,6 +59,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-components
     Components({
       dts: true,
+      resolvers: [IonicResolver()],
     }),
 
     // https://github.com/antfu/unocss

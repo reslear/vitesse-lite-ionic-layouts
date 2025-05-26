@@ -13,6 +13,8 @@
     "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
+    "@ionic/vue": "^8.5.7",
+    "@ionic/vue-router": "^8.5.7",
     "@vueuse/core": "catalog:frontend",
     "vue": "catalog:frontend",
     "vue-router": "catalog:frontend"

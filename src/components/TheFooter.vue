@@ -1,15 +1,30 @@
-<template>
-  <nav text-xl mt-6 inline-flex gap-2>
-    <button icon-btn @click="toggleDark()">
-      <div i-carbon-sun dark:i-carbon-moon />
-    </button>
+<script setup lang="ts">
+import { useDark, useToggle } from '@vueuse/core'
+import { moon, sunny } from 'ionicons/icons'
 
-    <a
-      i-carbon-logo-github icon-btn
-      rel="noreferrer"
-      href="https://github.com/antfu-collective/vitesse-lite"
-      target="_blank"
-      title="GitHub"
-    />
-  </nav>
+const isDark = useDark({
+  valueDark: 'ion-palette-dark',
+})
+const toggleDark = useToggle(isDark)
+</script>
+
+<template>
+  <IonFooter>
+    <nav class="py-2 flex gap-2 items-center justify-center">
+      <IonButton fill="clear" @click="toggleDark()">
+        <IonIcon :icon="isDark ? sunny : moon" />
+      </IonButton>
+
+      <a
+        i-carbon-logo-github
+        class="text-black dark:text-white"
+        rel="noreferrer"
+        href="https://github.com/antfu-collective/vitesse-lite"
+        target="_blank"
+        title="GitHub"
+      />
+    </nav>
+
+    <slot />
+  </IonFooter>
 </template>
