@@ -21,6 +21,7 @@ const router = useRouter()
   </div>
 </template>
 
+
 <route lang="yaml">
 meta:
   layout: user

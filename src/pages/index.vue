@@ -41,6 +41,19 @@ function go() {
       >
         Go
       </button>
+
+      <button
+        class="text-sm m-3 btn"
+        @click="router.push('/test')"
+      >
+        Go to test
+      </button>
+
     </div>
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: default
+</route>
